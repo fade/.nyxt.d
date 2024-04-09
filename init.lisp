@@ -44,13 +44,13 @@
 
 (define-configuration buffer
     ((download-path (make-instance 'download-data-path
-                                 :dirname "~/usr/tmp/"))
+                                 :dirname "~/Downloads/"))
      (bookmarks-path (make-instance 'bookmarks-data-path
                                   :basename "~/usr/bkm/bookmarks.lisp"))
      (auto-mode-rules-data-path (make-instance 'auto-mode-rules-data-path
 					       :basename "~/.config/nyxt/auto-mode-rules.lisp"))
-     (history-data-path (make-instance 'history-data-path
-				       :basename "/dev/null"))
+     ;; (history-data-path (make-instance 'history-data-path
+     ;;    			       :basename "/dev/null"))
      (override-map (let ((map (make-keymap "override-map")))
 		     (define-key map
 		       "M-x" 'execute-command)))))
